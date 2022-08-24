@@ -11,11 +11,27 @@ use AdventureWorks2012
 --select * from Sales.SalesTaxRate
 --select * from Sales.SalesTerritory
 --select * from Sales.SalesTerritory
-select * from Sales.SpecialOffer
+--select * from Sales.SpecialOffer
 
---Need to start from SalesOrderHeader, select all OrderID's that have an Order date between 01-01 01-31, 2008
---Selecting all that have a Territory ID of 4, join the SalesTerritory table so you can include all relevent info for territory
---Join the SalesOrderHeaderSalesReason table so taht you can filter by SalesReasonID
---Join SalesReason so you can provide the necessary info about the SalesReason
+--Next include the sales person, try to find some other stuff that is more difficult to join
 
 --Knowlton Querying search for FK placement of SalesPerson FK_SalesPerson_Employee_BusinessEntityID
+
+SELECT 
+	SOH.SalesOrderID AS [Sales Order ID], 
+	SOH.OrderDate AS [Order Date], 
+	ST.Name AS [Territory],
+	ST.CountryRegionCode AS [Country],
+	SR.Name AS [Sales Reason]
+FROM 
+	Sales.SalesOrderHeader SOH
+INNER JOIN
+	Sales.SalesTerritory ST ON ST.TerritoryID = SOH.TerritoryID	
+INNER JOIN 
+	Sales.SalesOrderHeaderSalesReason HSR ON HSR.SalesOrderID = SOH.SalesOrderID
+INNER JOIN 
+	Sales.SalesReason SR ON SR.SalesReasonID = HSR.SalesReasonID
+WHERE 
+	(SOH.OrderDate BETWEEN '2008-01-01' AND '2008-01-31') 
+	AND ST.TerritoryID = 4
+	AND HSR.SalesReasonID = 2
