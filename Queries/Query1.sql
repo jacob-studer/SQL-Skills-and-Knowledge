@@ -35,3 +35,5 @@ WHERE
 	(SOH.OrderDate BETWEEN '2008-01-01' AND '2008-01-31') 
 	AND ST.TerritoryID = 4
 	AND HSR.SalesReasonID = 2
+--INNER JOIN 
+	--Sales.SalesPerson SP ON SP.BusinessEntityID = SOH.SalesPersonID
