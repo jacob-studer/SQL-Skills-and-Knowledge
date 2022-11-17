@@ -37,3 +37,8 @@ WHERE
 	AND HSR.SalesReasonID = 2
 --INNER JOIN 
 	--Sales.SalesPerson SP ON SP.BusinessEntityID = SOH.SalesPersonID
+--pg 47 of tsql guide
+
+-- Thoughts on a outer join: Some of these datasets may have null values for the 
+--values that are being joined on - may want to return all orders in the set 
+--regardless if there is null values or not
