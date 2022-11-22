@@ -1,3 +1,5 @@
+--joins
+
 --Return the Name and ListPrice columns from Production.Product. For each product, regardless
 --of whether or not it has an assigned ProductSubcategoryID, return the Name column from
 --Product.ProductSubcategory for each product. Then, return the Name column from
