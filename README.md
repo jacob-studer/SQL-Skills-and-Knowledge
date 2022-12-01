@@ -2,7 +2,9 @@
 
 Hello! This is a repository showcasing my knowledge of Data Manipulation in SQL. It contains various Queries, Updates, Inserts, and Deletions from the 2012 Microsfot AdventureWorks database.
 
-All Queries were written by me to solve user case scenarios that I came up with myself.
+(Currently a work in progress)
+
+All Queries were written by me to solve user case scenarios that either I came up with myself, or was presented to me in the training guide I was learning from.
 
 All of these are ran with T-SQL on the Microsoft SSMS.
 
