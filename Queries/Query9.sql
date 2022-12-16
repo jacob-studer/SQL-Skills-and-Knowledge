@@ -13,3 +13,13 @@ INNER JOIN Person.StateProvince SP
 ON SP.StateProvinceID = A.StateProvinceID
 WHERE SP.Name = 'California'
 )
+
+--correlative subquery
+select 
+ProductID, Name, ListPrice
+from Production.product p1
+where 539.99 in (
+	select ListPrice
+	from Production.Product p2
+	where p2.ListPrice = p1.ListPrice
+)
