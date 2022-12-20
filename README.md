@@ -1,5 +1,7 @@
 # Custom-SQL-Queries-AdventureWorks-DB
 
+This repository has evolved through many different stages through its lifecycle to what it is now. I consider it to be the most up to date show of my SQL knowledge.
+
 Hello! This is a repository showcasing my knowledge of Data Manipulation in SQL. It contains various Queries, Updates, Inserts, and Deletions from the 2012 Microsoft AdventureWorks database.
 
 (Currently a work in progress)
