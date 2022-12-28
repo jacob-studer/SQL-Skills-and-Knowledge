@@ -13,3 +13,24 @@ select
     on d.doctor_id = a.attending_doctor_id
     where a.diagnosis = 'Epilepsy'
     and d.first_name = 'Lisa'
+
+
+--Query an alphabetically ordered list of all names in OCCUPATIONS, immediately followed 
+--by the first letter of each profession as a parenthetical (i.e.: enclosed in parentheses). For example: 
+--AnActorName(A), ADoctorName(D), AProfessorName(P), and ASingerName(S).
+
+--Query the number of ocurrences of each occupation in OCCUPATIONS. Sort the occurrences in ascending order, 
+--and output them in the following format:
+--There are a total of [occupation_count] [occupation]s.
+
+select 
+    name, 
+    CONCAT('(', LEFT(occupation, 1),')')
+from occupations
+order by name asc
+
+select 
+    CONCAT ('There are a total of ', count(occupation), ' ', LOWER(occupation), 's.')
+from occupations
+group by occupation
+order by occupation asc, 
