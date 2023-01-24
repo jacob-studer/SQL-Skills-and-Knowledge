@@ -1,5 +1,3 @@
---having clause
-
 --Starting with the Sales.SalesOrderHeader table, join to the Sales.SalesOrderDetail table. This
 --table contains the line item details associated with each sale. From Sales.SalesOrderDetail, join
 --to the Production.Product table. Return the Name column from Production.Product and assign

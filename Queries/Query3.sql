@@ -1,5 +1,3 @@
---aggregate functions
-
 --if we sold every product for its list price for each product with
 --a ListPrice greater than $0. That is, if you summed the product of each product’s inventory by
 --its list price, what would that value be? 

@@ -1,5 +1,3 @@
---Case Statement
-
 --Find out how many sales in Sales.SalesOrderHeader fell into the following ranges: “$0 to
 --$149.99”, “$150 – 499.99”, “$500 to $4,999.99”, “$5,000 - $24,999.99”, and “Over $25,000”.
 --Only analyze sales that had a sales person associated with them

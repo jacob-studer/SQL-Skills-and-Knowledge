@@ -8,12 +8,13 @@
 --“ProductSubcategoryName”, and the Name column from Production.ProductCategory the alias
 --“ProductCategoryName”. Order the results by the “ProductCategoryName” in descending order
 --and then the “ProductSubcategoryName” in ascending order.
+use AdventureWorks2012
 
 select 
 	p.Name as [ProductName], 
 	p.ListPrice, 
 	psc.Name as [ProductSubcategoryName], 
-	--psc.ProductSubcategoryID, 
+	psc.ProductSubcategoryID, 
 	pc.Name as [ProductCategoryName]
 from Production.Product p
 left outer join Production.ProductSubcategory psc

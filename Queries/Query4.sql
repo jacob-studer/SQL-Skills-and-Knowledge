@@ -1,5 +1,3 @@
---group by clause
-
 --Using Sales.SalesOrderHeader, how many sales occurred in each territory between July 1, 2005
 --and December 31, 2006? Order the results by the sale count in descending order.
 
