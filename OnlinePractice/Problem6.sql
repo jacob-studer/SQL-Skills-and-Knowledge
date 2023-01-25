@@ -1,26 +1,27 @@
---Write an SQL query to report the name and the mail of all interview candidates. 
---A user is an interview candidate if at least one of these two conditions is true:
+--Write an SQL query to find the most recent order(s) of each product.
 
---The user won any medal in three or more consecutive contests.
---The user won the gold medal in three or more different contests (not necessarily consecutive).
+--Return the result table ordered by product_name in ascending order and in case of a tie 
+--by the product_id in ascending order. If there still a tie, order them by order_id in 
+--ascending order.
 
-with t1 
+
+
+with recentorderdate
 as (
-    select gold_medal
-    from contests
-    group by gold_medal
-    having count(contest_id) >=3
+	select max(order_date) as orderdate, product_id
+	from Orders
+	group by product_id
+),
+
+orderstable as (
+	select o.product_id, o.order_id, o.order_date
+	from orders o
+	join recentorderdate rod
+	on rod.product_id=o.product_id and rod.orderdate=o.order_date
 )
 
-t2 as (
-	select contest_id, gold_medal as user_id
-	from contests
-	union all
-	select contest_id, silver_medal
-	from contests
-	union all
-	select contest_id, bronze_medal
-	from contests
-)
+select p.product_name, p.product_id, ot.order_id, ot.order_date
+from Products p
+join orderstable ot on o.product_id=p.product_id
+order by p.product_name asc, p.product_id asc, ot.order_id asc
 
-select * from contests
