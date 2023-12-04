@@ -1,6 +1,6 @@
 # Custom-SQL-Queries-AdventureWorks-DB
 
-This repository has evolved through many different stages through its lifecycle to what it is now. I consider it to be the most up to date show of my SQL knowledge. It contains various Queries from the 2012 Microsoft AdventureWorks database, and also practice questions I have solved on Leetcode or other coding practice websites.
+This repository shows so actual examples of my querying abilities using T-SQL in Microsoft SSMS. What isn't seen here is the wealth of experience I have accumulated in database searching and data validation within relational databases that I have accumulated over the past few years.
 
 All of these are ran with T-SQL on Microsoft SSMS.
 
